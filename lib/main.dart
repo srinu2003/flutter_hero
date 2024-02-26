@@ -15,10 +15,10 @@ class MainApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Hello World'),
         ),
-        // body: const Center(
-        //   child: Text('Body child widget', style: TextStyle(fontSize: 24)),
-        // ),
-        body: const Text( 'Body child widget', style: TextStyle(fontSize: 24)),
+        body: const Center(
+          child: Text('Body child widget', style: TextStyle(fontSize: 24)),
+        ),
+        // body: const Text( 'Body child widget', style: TextStyle(fontSize: 24)),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             if (kDebugMode) {
