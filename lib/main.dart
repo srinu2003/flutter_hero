@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,11 +10,23 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
+        appBar: AppBar(
+          title: const Text('Hello World'),
         ),
+        // body: const Center(
+        //   child: Text('Body child widget', style: TextStyle(fontSize: 24)),
+        // ),
+        body: const Text( 'Body child widget', style: TextStyle(fontSize: 24)),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            if (kDebugMode) {
+              print('Floating action button pressed');
+            }
+          },
+          child: const Icon(Icons.add_ic_call_outlined),
+        )
       ),
     );
   }
